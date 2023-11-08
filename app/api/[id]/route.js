@@ -3,10 +3,10 @@ export const GET = async (request, { params }) => {
     console.log(params.id)
     console.log("inside request")
 
-    // const apiKey = "AIzaSyDXki3QBRM9cnzJ7fxL3VDEY9xbLsalYfc";
+    const apiKey = process.env.GoogleAPI
     // const query = "lakes+wales";
     // const apiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${apiKey}`;
-    const apiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${params.id}&key=AIzaSyDXki3QBRM9cnzJ7fxL3VDEY9xbLsalYfc`
+    const apiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${params.id}&key=${apiKey}`
     
         try {
             const response = await fetch(apiUrl)

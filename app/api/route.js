@@ -1,6 +1,6 @@
 export const GET = async (request) => {
 
-const apiKey = "AIzaSyDXki3QBRM9cnzJ7fxL3VDEY9xbLsalYfc";
+const apiKey = process.env.GoogleAPI
 const query = "lakes+wales";
 const apiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${apiKey}`;
 
