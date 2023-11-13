@@ -1,7 +1,11 @@
+"Returns type PlaceByTextSearch[]"
 export const GET = async (request) => {
 
-const apiKey = process.env.GoogleAPI
-const query = "lakes+wales";
+    /// aonb
+    //
+
+const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API
+const query = "watersports+wales";
 const apiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${apiKey}`;
 
 

@@ -1,9 +1,13 @@
+"Returns type PlaceByIdSearch[]"
+
 export const GET = async (request, { params }) => {
 
-    console.log(params.id)
-    console.log("inside request")
+    // console.log(params.id)
+    // console.log("inside request")
 
-    const apiKey = process.env.GoogleAPI
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API
+
+    // console.log(apiKey)
     // const query = "lakes+wales";
     // const apiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&key=${apiKey}`;
     const apiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${params.id}&key=${apiKey}`
@@ -24,8 +28,3 @@ export const GET = async (request, { params }) => {
     
         }
     }
-    // https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuElP75L0j7ZuKQG97AGGPDHevPgtxqrhPdJJ2EEj-bzCA-T8dvv2xE8dGIjBFVFsju97dYd1eY3XRHCyNGMxZOcwNXu7WHOvKTMKRuztQ17KpHm6VCU_ewxYmGdD4uiNeXgpq7Ap9PgDA5swHdUvalhFdK0UknZcHz-BdrS7eL_wOLi&key=AIzaSyDXki3QBRM9cnzJ7fxL3VDEY9xbLsalYfc
-
-
-    
-    // https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuHJHl51TY9NrhUqNRWg7jIoLAI1n-qh63bL_mbNMbEMxUSHaz6kkLAIKCuE-uqdF6CZIP6INDaJ1xgIHxHyAURPlIM6Yoy-KAClg1442viR6bX9eDYxUT5sYVv7X2HmYWczTLwl8ot2LcLVvg36DFlYDziAnFcJeoL6wL5kxHC5z-MD&key=AIzaSyDXki3QBRM9cnzJ7fxL3VDEY9xbLsalYfc
