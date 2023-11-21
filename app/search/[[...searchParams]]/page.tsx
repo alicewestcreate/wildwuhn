@@ -10,7 +10,7 @@ type Props = {
 };
 
 const SearchParams = ({ params, searchParams }: Props) => {
-  console.log(params, searchParams);
+  // console.log("SearchParams PAGE", params, searchParams);
 
   return (
     <>

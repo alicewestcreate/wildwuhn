@@ -1,11 +1,14 @@
 type FilterObject = {
-    [key: string]: string | undefined
-}
+  [key: string]: string | undefined;
+};
 
 export const buildSearchQueryString = (filters: FilterObject) => {
-    const queryList = Object.entries(filters)
+  const queryList = Object.entries(filters)
+    // filter all values that are falsey
     .filter(([_, value]) => Boolean(value))
-    .map(([key, value], index) => (index > 0 ? `&${key}=${value}`: `${key}=${value}`))
+    // map all values in the this template literal
+    .map(([key, value]) => `${key}=${value}`);
 
-    return queryList.join("")
-}
+  // join the array with '&'
+  return queryList.join("&");
+};

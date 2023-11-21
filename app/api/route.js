@@ -1,8 +1,6 @@
 "Returns type PlaceByTextSearch[]"
 export const GET = async (request) => {
 
-    /// aonb
-    //
 
 const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API
 const query = "watersports+wales";
